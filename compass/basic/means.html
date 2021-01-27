@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Means</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+  .fakeimg {
+    height: 200px;
+    background: #aaa;
+  }
+  </style>
+</head>
+
+
+<body>
+
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <a class="navbar-brand" href="../compass_main.html">Main</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="basic_intro.html">Basics</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../thy/thy_intro.html">Theories</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../triangle/triangle_intro.html">Triangles</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../circle/circle_intro.html">Circles</a>
+      </li>    
+      <li class="nav-item">
+        <a class="nav-link" href="../problem/problem_intro.html">Problems</a>
+      </li>    
+    </ul>
+  </div>  
+</nav>
+
+<div class="container-fluid" style="margin-top:30px">
+  <div class="row">
+    <div class="col-sm-2">
+      <h2>Categories</h2>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="basic_intro.html">Overview</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="parallel.html">Parallels</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="1_over_n.html">\(\frac{1}{n}\) of segment</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="perp_bisect.html">Perpendicular bisector</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="angle_bisect.html">Angle bisector</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="median.html">Median</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="alt.html">Altitude</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="means.html">Means</a>
+          </li>
+        </ul>
+      <hr class="d-sm-none">
+    </div>
+    <div class="col-sm-10">
+      <h2>Means</h2>
+
+      <p>
+        Here we give a classic and efficient way to construct the four means of two numbers \(a\) and \(b\). The four means are:
+      </p>
+
+      <ul>
+        <li>
+          <b>Arithmetic mean</b>: \(\displaystyle \frac{a+b}{2}\)
+        </li>
+        <li>
+          <b>Geometric mean</b>: \(\sqrt{ab}\)
+        </li>
+        <li>
+          <b>Harmonic mean</b>: \(\displaystyle \frac{2}{\frac{1}{a}+\frac{1}{b}}\)
+        </li>
+        <li>
+          <b>Quadratic mean (RMS)</b>: \(\displaystyle \sqrt{\frac{a^2+b^2}{2}}\)
+        </li>
+      </ul>
+
+      <p>
+        The construction is given here:
+      </p>
+
+      <ol>
+        <li>
+          Construct a straight line ACB, where AC has length \(a\) and BC has length \(b\).
+        </li>
+        <li>
+          Draw a semi-circle with diameter AB. Let ED be the perpendicular bisector of AB, where E lies on the semi-circle.
+        </li>
+        <li>
+          Let FC be the altitude of AC, where F lies on the semi-circle.
+        </li>
+        <li>
+          Connect EC and FD. Let G be the perpendicular foot of C on FD.
+        </li>
+        <li>
+          Now DE is the arithmetic mean, CF is the geometric mean, GF is the harmonic mean and CE is the quadratic mean.
+        </li>
+      </ol>
+
+      <svg height="800", width="600">
+        <text x="100" y="50" fill="black">Step 1</text>
+        <line x1="200" y1="25" x2="500" y2="25" style="stroke:rgb(255,0,0);stroke-width:2" />
+        <text x="200" y="50" fill="black">A</text>
+        <text x="400" y="50" fill="black">C</text>
+        <text x="500" y="50" fill="black">B</text>
+
+        <text x="100" y="250" fill="black">Step 2</text>
+        <line x1="200" y1="225" x2="500" y2="225" style="stroke:rgb(255,0,0);stroke-width:2" />
+        <path d="M 200,225 a 150,150 0 0,1 300,0" stroke="blue" fill="none" stroke-width="2"/>
+        <line x1="350" y1="75" x2="350" y2="225" style="stroke:rgb(0,0,255);stroke-width:2" />
+        <text x="200" y="250" fill="black">A</text>
+        <text x="400" y="250" fill="black">C</text>
+        <text x="500" y="250" fill="black">B</text>
+        <text x="350" y="250" fill="black">D</text>
+        <text x="350" y="70" fill="black">E</text>
+
+        <text x="100" y="450" fill="black">Step 3</text>
+        <line x1="200" y1="450" x2="500" y2="450" style="stroke:rgb(255,0,0);stroke-width:2" />
+        <path d="M 200,450 a 150,150 0 0,1 300,0" stroke="blue" fill="none" stroke-width="2"/>
+        <line x1="350" y1="300" x2="350" y2="450" style="stroke:rgb(0,0,255);stroke-width:2" />
+        <line x1="400" y1="308" x2="400" y2="450" style="stroke:rgb(0,0,255);stroke-width:2" />
+        <text x="200" y="475" fill="black">A</text>
+        <text x="400" y="475" fill="black">C</text>
+        <text x="500" y="475" fill="black">B</text>
+        <text x="350" y="475" fill="black">D</text>
+        <text x="350" y="290" fill="black">E</text>
+        <text x="400" y="300" fill="black">F</text>
+
+        <text x="100" y="650" fill="black">Step 4</text>
+        <line x1="200" y1="650" x2="500" y2="650" style="stroke:rgb(255,0,0);stroke-width:2" />
+        <path d="M 200,650 a 150,150 0 0,1 300,0" stroke="blue" fill="none" stroke-width="2"/>
+        <line x1="350" y1="500" x2="350" y2="650" style="stroke:rgb(0,0,255);stroke-width:2" />
+        <line x1="400" y1="508" x2="400" y2="650" style="stroke:rgb(0,0,255);stroke-width:2" />
+        <line x1="350" y1="500" x2="400" y2="650" style="stroke:rgb(0,255,0);stroke-width:2" />
+        <line x1="400" y1="508" x2="350" y2="650" style="stroke:rgb(0,255,0);stroke-width:2" />
+        <line x1="357" y1="627" x2="400" y2="650" style="stroke:rgb(0,255,0);stroke-width:2" />
+        <text x="200" y="675" fill="black">A</text>
+        <text x="400" y="675" fill="black">C</text>
+        <text x="500" y="675" fill="black">B</text>
+        <text x="350" y="675" fill="black">D</text>
+        <text x="350" y="490" fill="black">E</text>
+        <text x="400" y="500" fill="black">F</text>
+        <text x="350" y="620" fill="black">G</text>
+      </svg>
+
+      <p>
+        Below proves our proposition.
+      </p>
+
+      <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#pf">Proof</button>
+      <div id="pf" class="collapse">
+        <p>
+          The semi-circle has radius \(\displaystyle \frac{a+b}{2}\), so DE is the arithmetic mean.
+        </p>
+        <p>
+          For CF, note DF = \(\frac{a+b}{2}\) and CD = \(\frac{a-b}{2}\), so by Pythagoras theorem
+          $$ CF = \sqrt{\left(\frac{a+b}{2}\right)^2 - \left(\frac{a-b}{2}\right)^2} = \sqrt{ab}. $$
+        </p>
+        <p>
+          For GF, note \(\Delta FGC \sim \Delta FCD\), so
+          $$ GF = CF \frac{CF}{DF} = \frac{2ab}{a+b} = \frac{2}{\frac{1}{a}+\frac{1}{b}}. $$
+        </p>
+        <p>
+          For CE, it follows from Pythagoras theorem that
+          $$ CE = \sqrt{\left(\frac{a+b}{2}\right)^2+\left(\frac{a-b}{2}\right)^2} = \sqrt{\frac{a^2+b^2}{2}}. $$
+        </p>
+      </div>
+
+      <p>
+        In fact, this construction gives a visualisation of the <b>HM-GM-AM-QM inequality</b> for \(n=2\):
+        $$ \frac{2}{\frac{1}{a}+\frac{1}{b}} \leq \sqrt{ab} \leq \frac{a+b}{2} \leq \sqrt{\frac{a^2+b^2}{2}}. $$
+      </p>
+
+    </div>
+  </div>
+</div>
+
+<div class="jumbotron text-center" style="margin-bottom:0">
+  <p>Created by Tony Chan @ 2020</p>
+
+  <p>Github: <a href="http://github.com/tony-507">http://github.com/tony-507</a></p>
+</div>
+
+</body>
+</html>

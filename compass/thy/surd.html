@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Surds</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+  .fakeimg {
+    height: 200px;
+    background: #aaa;
+  }
+  </style>
+</head>
+
+
+<body>
+
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <a class="navbar-brand" href="../compass_main.html">Main</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="basic_intro.html">Basics</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../thy/thy_intro.html">Theories</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../triangle/triangle_intro.html">Triangles</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../circle/circle_intro.html">Circles</a>
+      </li>    
+      <li class="nav-item">
+        <a class="nav-link" href="../problem/problem_intro.html">Problems</a>
+      </li>    
+    </ul>
+  </div>  
+</nav>
+
+<div class="container-fluid" style="margin-top:30px">
+  <div class="row">
+    <div class="col-sm-2">
+      <h2>Categories</h2>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="thy_intro.html">Overview</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="add_min.html">Addition and subtraction</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="mul_div.html">Multiplication and division</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="surd.html">Surds</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="thy.html">Constructibility of a point</a>
+          </li>
+        </ul>
+      <hr class="d-sm-none">
+    </div>
+    <div class="col-sm-10">
+      <h2>Surds</h2>
+      
+      <p>
+        Here we consider construction of surds. That is, given a constructible number \(a\), how we can construct \(\sqrt{a}\).
+      </p>
+
+      <p>
+        The idea behind this construction is just a special case of geometric mean: the geometric mean of \(a\) and 1 is precisely \(\sqrt{a}\).
+      </p>
+
+      <ol>
+        <li>
+          Construct AB with length \(a\) and extend AB to AC with length \(a+1\).
+        </li>
+        <li>
+          Draw a semi-circle with diameter AC.
+        </li>
+        <li>
+          The perpendicular foot DB from the semi-circle to AC is the desired segment with length \(\sqrt{a}\).
+        </li>
+      </ol>
+
+      <svg height="1100" width="800">
+        <text x="100" y="50" fill="black">Step 1</text>
+        <line x1="200" y1="50" x2="600" y2="50" style="stroke:rgb(255,0,0);stroke-width:2" />
+        <text x="200" y="75" fill="black">A</text>
+        <text x="500" y="75" fill="black">B</text>
+        <text x="600" y="75" fill="black">C</text>
+
+        <text x="100" y="450" fill="black">Step 2</text>
+        <line x1="200" y1="450" x2="600" y2="450" style="stroke:rgb(255,0,0);stroke-width:2" />
+        <path d="M 200,450 a 200,-200 0 1,1 400,0" fill="none" stroke-width="2" stroke="green"/>
+        <text x="200" y="475" fill="black">A</text>
+        <text x="500" y="475" fill="black">B</text>
+        <text x="600" y="475" fill="black">C</text>
+
+        <text x="100" y="850" fill="black">Result</text>
+        <line x1="200" y1="850" x2="600" y2="850" style="stroke:rgb(255,0,0);stroke-width:2" />
+        <path d="M 200,850 a 200,-200 0 1,1 400,0" fill="none" stroke-width="2" stroke="green"/>
+        <line x1="500" y1="850" x2="500" y2="676.79" style="stroke:rgb(0,0,255);stroke-width:2" />
+        <text x="200" y="875" fill="black">A</text>
+        <text x="500" y="875" fill="black">B</text>
+        <text x="600" y="875" fill="black">C</text>
+        <text x="500" y="660" fill="black">D</text>
+      </svg>
+
+      <p>
+        The proof of the construction can be found in the section of means.
+      </p>
+
+    </div>
+  </div>
+</div>
+
+<div class="jumbotron text-center" style="margin-bottom:0">
+  <p>Created by Tony Chan @ 2020</p>
+
+  <p>Github: <a href="http://github.com/tony-507">http://github.com/tony-507</a></p>
+</div>
+
+</body>
+</html>

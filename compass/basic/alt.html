@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Altitude</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+  .fakeimg {
+    height: 200px;
+    background: #aaa;
+  }
+  </style>
+</head>
+
+
+<body>
+
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <a class="navbar-brand" href="../compass_main.html">Main</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="basic_intro.html">Basics</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../thy/thy_intro.html">Theories</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../triangle/triangle_intro.html">Triangles</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../circle/circle_intro.html">Circles</a>
+      </li>    
+      <li class="nav-item">
+        <a class="nav-link" href="../problem/problem_intro.html">Problems</a>
+      </li>    
+    </ul>
+  </div>  
+</nav>
+
+<div class="container-fluid" style="margin-top:30px">
+  <div class="row">
+    <div class="col-sm-2">
+      <h2>Categories</h2>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="basic_intro.html">Overview</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="parallel.html">Parallels</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="1_over_n.html">\(\frac{1}{n}\) of segment</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="perp_bisect.html">Perpendicular bisector</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="angle_bisect.html">Angle bisector</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="median.html">Median</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="alt.html">Altitude</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="means.html">Means</a>
+          </li>
+        </ul>
+      <hr class="d-sm-none">
+    </div>
+    <div class="col-sm-10">
+      <h2>Altitude</h2>
+      
+      <p>
+        Here we explore the construction of <b>altitude</b> of a line. More specifically, given a line OA, we find B such that \(OA\perp AB\). There are three ways to do so.
+      </p>
+
+      <p>
+        The first method is to extend OA to OAC with OA = AC, and then find the perpendicular bisector BD of OC. This has been discussed in the section of perpendicular bisector, so it won't be discussed here.
+      </p>
+
+      <p>
+        The second method employs <b>converse of pythagoras theorem</b>, i.e. we construct a right angle by Pythagorean triple.
+      </p>
+
+      <ol>
+        <li>
+          Fix a small length \(r\). Find C on OA such that AC = \(3r\).
+        </li>
+        <li>
+          Draw arcs with radius \(4r\) centered at A and \(5r\) centered at C respectively. Denote the intersection of the two arcs by D.
+        </li>
+        <li>
+          AD is the desired altitude of OA at A.
+        </li>
+      </ol>
+
+      <svg height="300" width="600">
+        <line x1="200" y1="200" x2="500" y2="200" style="stroke:rgb(0,0,0);stroke-width:2" />
+        <path d="M 425,75 a 125,125 0 0,1 125,125" stroke="red" stroke-width="2" fill="none" />
+        <path d="M 430,128.6 a 100,100 0 0,1 156.6,21.4" stroke="red" stroke-width="2" fill="none" />
+        <line x1="500" y1="100" x2="500" y2="200" style="stroke:rgb(0,0,255);stroke-width:2" />
+        <text x="200" y="220" fill="black">O</text>
+        <text x="500" y="220" fill="black">A</text>
+        <text x="425" y="220" fill="black">C</text>
+        <text x="500" y="90" fill="black">B</text>
+      </svg>
+
+      <p>
+        The proof of this construction is trivial. We can also use other Pythagorean triple for construction.
+      </p>
+
+      <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#pf1">Proof</button>
+      <div id="pf1" class="collapse">
+        \( (3r,4r,5r)\) is a Pythagorean triple, so by converse of Pythagoras theorem, \(\angle BAO = \frac{\pi}{2}\).
+      </div>
+
+      <p>
+        <br>
+        The last method uses <b>angle in semi-circle</b>.
+      </p>
+
+      <ol>
+        <li>
+          Fix a point B that does not lie on OA. Draw a circle centered at B passing through A. Denote the intersection of the circle with A other than A by C.
+        </li>
+        <li>
+          Connect CB and extend it to meet the circle again. Denote the point to meet again by D.
+        </li>
+        <li>
+          The line AD is the desired altitude of OA at A.
+        </li>
+      </ol>
+
+      <svg height="550" width="600">
+        <text x="100" y="50" fill="black">Step 1</text>
+        <line x1="200" y1="200" x2="500" y2="200" style="stroke:rgb(0,0,0);stroke-width:2" />
+        <circle cx="440" cy="120" r="100" stroke="red" stroke-width="2" fill="none" />
+        <text x="200" y="220" fill="black">O</text>
+        <text x="500" y="220" fill="black">A</text>
+        <text x="440" y="130" fill="black">B</text>
+        <text x="380" y="220" fill="black">C</text>
+
+        <text x="100" y="350" fill="black">Step 2</text>
+        <line x1="200" y1="500" x2="500" y2="500" style="stroke:rgb(0,0,0);stroke-width:2" />
+        <line x1="380" y1="500" x2="500" y2="340" style="stroke:rgb(0,0,255);stroke-width:2" />
+        <line x1="500" y1="500" x2="500" y2="340" style="stroke:rgb(0,255,0);stroke-width:2" />
+        <circle cx="440" cy="420" r="100" stroke="red" stroke-width="2" fill="none" />
+        <text x="200" y="520" fill="black">O</text>
+        <text x="500" y="520" fill="black">A</text>
+        <text x="440" y="430" fill="black">B</text>
+        <text x="380" y="520" fill="black">C</text>
+        <text x="500" y="340" fill="black">D</text>
+      </svg>
+
+      <p>
+        Let's see why it works.
+      </p>
+
+      <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#pf">Proof</button>
+      <div id="pf" class="collapse">
+        <p>
+          Note CBD is a diameter of the circle, so \(\angle DAC = \frac{\pi}{2}\) by angle in semi-circle.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="jumbotron text-center" style="margin-bottom:0">
+  <p>Created by Tony Chan @ 2020-2021</p>
+</div>
+
+</body>
+</html>

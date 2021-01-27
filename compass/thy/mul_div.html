@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Multiplication and division</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+  .fakeimg {
+    height: 200px;
+    background: #aaa;
+  }
+  </style>
+</head>
+
+
+<body>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <a class="navbar-brand" href="compass_main.html">Main</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="basic_intro.html">Basics</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../thy/thy_intro.html">Theories</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../triangle/triangle_intro.html">Triangles</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../circle/circle_intro.html">Circles</a>
+      </li>    
+      <li class="nav-item">
+        <a class="nav-link" href="../problem/problem_intro.html">Problems</a>
+      </li>    
+    </ul>
+  </div>  
+</nav>
+
+<div class="container-fluid" style="margin-top:30px">
+  <div class="row">
+    <div class="col-sm-2">
+      <h2>Categories</h2>
+      <ul class="nav nav-pills flex-column">
+        <li class="nav-item">
+          <a class="nav-link" href="thy_intro.html">Overview</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="add_min.html">Addition and subtraction</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="mul_div.html">Multiplication and division</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="surd.html">Surds</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="thy.html">Constructibility of a point</a>
+        </li>
+      </ul>
+      <hr class="d-sm-none">
+    </div>
+    <div class="col-sm-10">
+      <h2>Multiplication and division</h2>
+      
+      <p>
+        Here we consider the product and quotient of constructible numbers.
+      </p>
+
+      <p>
+        To begin with, we note that we need the notion of "line of length 1". The necessity can be explained in two different perspectives.
+      </p>
+
+      <p>
+        One way to think of it is that the product may shrink or enlarge according to size of 1. For example, if we have two segments of length \(x\), then the product is <i>x<sup>2</sup></i>. If \(x < 1\), then the product should be shorter than the original segment. If \(x > 1\), then the product should be longer than the original segment.
+      </p>
+
+      <p>
+        An alternative consideration is that if constructible numbers are preserved under multiplication and division, then we should be able to construct \(\frac{x}{x} = 1\). Then if 1 is not constructible, constructibility will not be preserved under both operations.
+      </p>
+
+      <p>
+        To perform multiplication, we apply similar triangles. Given \(a,b\) and 1, we want to construct a segment of length \(x\) such that $$\frac{x}{a} = \frac{b}{1}.$$ For simplicity, we consider only the case \(a < 1\). The case \(a > 1\) is similar.
+      </p>
+
+      <ol>
+        <li>
+          Construct OA with length \(a\), OB with length \(b\) and OC with length 1, where O,A,C are collinear.
+        </li>
+        <li>
+          Connect BC and find D on OB such that DA is parallel to BC.
+        </li>
+        <li>
+          Then OD is the desired segment of length \(ab\).
+        </li>
+      </ol>
+
+      <svg height="600" width="800">
+        <text x="100" y="50" fill="black">Step 1</text>
+        <line x1="200" y1="150" x2="600" y2="150" style="stroke:rgb(255,0,0);stroke-width:2" />
+        <text x="200" y="175" fill="black">O</text>
+        <text x="400" y="175" fill="black">A</text>
+        <text x="600" y="175" fill="black">C</text>
+        <line x1="200" y1="150" x2="500" y2="50" style="stroke:rgb(255,0,0);stroke-width:2" />
+        <text x="525" y="50" fill="black">B</text>
+
+        <text x="100" y="250" fill="black">Step 2</text>
+        <line x1="200" y1="350" x2="600" y2="350" style="stroke:rgb(255,0,0);stroke-width:2" />
+        <text x="200" y="375" fill="black">O</text>
+        <text x="400" y="375" fill="black">A</text>
+        <text x="600" y="375" fill="black">C</text>
+        <line x1="200" y1="350" x2="500" y2="250" style="stroke:rgb(255,0,0);stroke-width:2" />
+        <text x="525" y="250" fill="black">B</text>
+        <line x1="500" y1="250" x2="600" y2="350" style="stroke:rgb(0,255,0);stroke-width:2" />
+        <line x1="400" y1="350" x2="350" y2="300" style="stroke:rgb(0,255,0);stroke-width:2" />
+        <text x="350" y="290" fill="black">D</text>
+
+        <text x="100" y="450" fill="black">Result</text>
+        <line x1="200" y1="550" x2="350" y2="500" style="stroke:rgb(0,0,255);stroke-width:2" />
+        <text x="200" y="575" fill="black">O</text>
+        <text x="350" y="490" fill="black">D</text>
+      </svg>
+
+      <p>
+        Next we consider division. Note \(\frac{a}{b} = a\frac{1}{b}\), so it suffices to show reciprocal of a constructible number is constructible. This can also be done via similar triangles. Again, we assume \(a < 1\) and construct its reciprocal.
+      </p>
+
+      <ol>
+        <li>
+          Construct OA with length \(a\), and extend the line to OC with length 1. Construct OB with length 1.
+        </li>
+        <li>
+          Connect BA and extend OB to OD such that DC is parallel to BA.
+        </li>
+        <li>
+          OD is the desired segment with length \(\frac{1}{a}\).
+        </li>
+      </ol>
+
+      <svg height="600" width="800">
+        <text x="100" y="50" fill="black">Step 1</text>
+        <line x1="200" y1="150" x2="600" y2="150" style="stroke:rgb(255,0,0);stroke-width:2" />
+        <text x="200" y="175" fill="black">O</text>
+        <text x="400" y="175" fill="black">A</text>
+        <text x="600" y="175" fill="black">C</text>
+        <line x1="200" y1="150" x2="300" y2="50" style="stroke:rgb(255,0,0);stroke-width:2" />
+        <text x="325" y="40" fill="black">B</text>
+
+        <text x="100" y="250" fill="black">Step 2</text>
+        <line x1="200" y1="350" x2="600" y2="350" style="stroke:rgb(255,0,0);stroke-width:2" />
+        <text x="200" y="375" fill="black">O</text>
+        <text x="400" y="375" fill="black">A</text>
+        <text x="600" y="375" fill="black">C</text>
+        <line x1="200" y1="350" x2="500" y2="250" style="stroke:rgb(255,0,0);stroke-width:2" />
+        <text x="525" y="250" fill="black">D</text>
+        <line x1="500" y1="250" x2="600" y2="350" style="stroke:rgb(0,255,0);stroke-width:2" />
+        <line x1="400" y1="350" x2="350" y2="300" style="stroke:rgb(0,255,0);stroke-width:2" />
+        <text x="350" y="290" fill="black">B</text>
+
+        <text x="100" y="450" fill="black">Result</text>
+        <line x1="200" y1="550" x2="500" y2="450" style="stroke:rgb(0,0,255);stroke-width:2" />
+        <text x="200" y="575" fill="black">O</text>
+        <text x="525" y="450" fill="black">D</text>
+      </svg>
+
+    </div>
+  </div>
+</div>
+
+<div class="jumbotron text-center" style="margin-bottom:0">
+  <p>Created by Tony Chan @ 2020</p>
+
+  <p>Github: <a href="http://github.com/tony-507">http://github.com/tony-507</a></p>
+</div>
+
+</body>
+</html>
