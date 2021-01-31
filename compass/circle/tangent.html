@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Tangent</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+  .fakeimg {
+    height: 200px;
+    background: #aaa;
+  }
+  </style>
+</head>
+
+
+<body>
+
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <a class="navbar-brand" href="../compass_main.html">Main</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="../basic/basic_intro.html">Basics</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../thy/thy_intro.html">Theories</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../triangle/triangle_intro.html">Triangles</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="circle_intro.html">Circles</a>
+      </li>    
+      <li class="nav-item">
+        <a class="nav-link" href="../problem/problem_intro.html">Problems</a>
+      </li>    
+    </ul>
+  </div>  
+</nav>
+
+<div class="container-fluid" style="margin-top:30px">
+  <div class="row">
+    <div class="col-sm-2">
+      <h2>Categories</h2>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="circle_intro.html">Overview</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="center.html">Center of circle</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="3_pt.html">Circle from 3 points</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="tangent.html">Tangent</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="conv_tan.html">Converse of tangent property</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="equ.html">Inscribing equilateral triangle</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sqr.html">Inscribing square</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="orth.html">Orthogonal circle</a>
+          </li>
+        </ul>
+      <hr class="d-sm-none">
+    </div>
+    <div class="col-sm-10">
+      <h2>Tangent</h2>
+      
+      <p>
+        Given a circle and a point \(A\) on the circle, we want to find the tangent to the circle through \(A\). This can be done easily by the fact that tangent perpendicular radius.
+      </p>
+
+      <ol>
+        <li>
+          Locate the center \(O\) of the circle.
+        </li>
+        <li>
+          Connect \(OA\).
+        </li>
+        <li>
+          Construct perpendicular of \(OA\) at \(A\). It is the desired tangent.
+        </li>
+      </ol>
+
+      <svg height="300" width="600">
+        <line x1="200" y1="200" x2="250" y2="150" style="stroke:rgb(0,255,0);stroke-width:2" />
+        <line x1="100" y1="100" x2="250" y2="250" style="stroke:rgb(0,0,255);stroke-width:2" />
+        <circle cx="250" cy="150" r="70.71" stroke="black" stroke-width="2" fill="none" />
+        <text x="200" y="220" fill="black">A</text>
+        <text x="250" y="170" fill="black">O</text>
+      </svg>
+
+      <p>
+        We can also contruct a tangent by angle in alternate segment.
+      </p>
+
+      <ol>
+        <li>
+          Pick \(B,C\) on the circle. Connect \(AB, BC, AC\).
+        </li>
+        <li>
+          Copy the angle \(\angle ABC\) to \(AC\). The other side of the angle is the tangent.
+        </li>
+      </ol>
+
+      <svg height="300" width="600">
+        <line x1="200" y1="200" x2="260" y2="80" style="stroke:rgb(255,0,0);stroke-width:2" />
+        <line x1="200" y1="200" x2="320.71" y2="150" style="stroke:rgb(255,0,0);stroke-width:2" />
+        <line x1="260" y1="80" x2="320.71" y2="150" style="stroke:rgb(255,0,0);stroke-width:2" />
+        <line x1="100" y1="100" x2="250" y2="250" style="stroke:rgb(0,0,255);stroke-width:2" />
+        <circle cx="250" cy="150" r="70.71" stroke="black" stroke-width="2" fill="none" />
+        <path d="M 311.47,153.83 a 10,10 0 0,1 2.69,-11.38" stroke="rgb(0,255,0)" stroke-width="2" fill="none" />
+        <path d="M 192.93,192.93 a 10,10 0 0,1 11.54,-1.87" stroke="blue" stroke-width="2" fill="none" />
+        <text x="200" y="220" fill="black">A</text>
+        <text x="260" y="70" fill="black">C</text>
+        <text x="325" y="150" fill="black">B</text>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<div class="jumbotron text-center" style="margin-bottom:0">
+  <p>Created by Tony Chan @ 2020-2021</p>
+</div>
+
+</body>
+</html>

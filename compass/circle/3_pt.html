@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Circle from 3 points</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+  .fakeimg {
+    height: 200px;
+    background: #aaa;
+  }
+  </style>
+</head>
+
+
+<body>
+
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <a class="navbar-brand" href="../compass_main.html">Main</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="../basic/basic_intro.html">Basics</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../thy/thy_intro.html">Theories</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../triangle/triangle_intro.html">Triangles</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="circle_intro.html">Circles</a>
+      </li>    
+      <li class="nav-item">
+        <a class="nav-link" href="../problem/problem_intro.html">Problems</a>
+      </li>    
+    </ul>
+  </div>  
+</nav>
+
+<div class="container-fluid" style="margin-top:30px">
+  <div class="row">
+    <div class="col-sm-2">
+      <h2>Categories</h2>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="circle_intro.html">Overview</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="center.html">Center of circle</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="3_pt.html">Circle from 3 points</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="tangent.html">Tangent</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="conv_tan.html">Converse of tangent property</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="equ.html">Inscribing equilateral triangle</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sqr.html">Inscribing square</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="orth.html">Orthogonal circle</a>
+          </li>
+        </ul>
+      <hr class="d-sm-none">
+    </div>
+    <div class="col-sm-10">
+      <h2>Circle from 3 points</h2>
+      
+      <p>
+        Given 3 noncollinear points \(A,B,C\), we can find a unique circle from those 3 points. This is actually the same steps as before.
+      </p>
+
+      <ol>
+        <li>
+          Connect AB and BC.
+        </li>
+        <li>
+          Construct perpendicular bisectors of AB and BC. Label their intersection as O.
+        </li>
+        <li>
+          O is the desired center of the circle.
+        </li>
+      </ol>
+
+      <svg height="300" width="600">
+        <line x1="320" y1="140" x2="300" y2="200" style="stroke:rgb(0,0,0);stroke-width:2" />
+        <line x1="200" y1="200" x2="300" y2="200" style="stroke:rgb(0,0,0);stroke-width:2" />
+        <line x1="400" y1="200" x2="100" y2="100" style="stroke:rgb(255,0,0);stroke-width:2" />
+        <line x1="250" y1="100" x2="250" y2="250" style="stroke:rgb(255,0,0);stroke-width:2" />
+        <circle cx="250" cy="150" r="70.71" stroke="black" stroke-width="2" fill="none" />
+        <text x="200" y="220" fill="black">A</text>
+        <text x="300" y="220" fill="black">B</text>
+        <text x="320" y="140" fill="black">C</text>
+        <text x="230" y="170" fill="black">O</text>
+      </svg>
+
+      <p>
+        Algebraically, the cartesian equation of a circle is
+        $$ x^2 + y^2 + Ax + By + C = 0.$$
+        If we have three points \(A(x_1,y_1), B(x_2,y_2), C(x_3,y_3) \), we have the system
+        $$ \begin{cases}
+        x_1A + y_1B + C & = -(x_1^2+y_1^2)\\
+        x_2A + y_2B + C & = -(x_2^2+y_2^2)\\
+        x_3A + y_3B + C & = -(x_3^2+y_3^2)\\
+        \end{cases}$$
+      </p>
+
+      <p>
+        The determinant of the system is
+        $$\begin{align*}
+        \begin{vmatrix}
+        x_1 & y_1 & 1\\
+        x_2 & y_2 & 1\\
+        x_3 & y_3 & 1\\
+        \end{vmatrix}
+        & =
+        \begin{vmatrix}
+        x_1 & y_1 & 1\\
+        x_2-x_1 & y_2-y_1 & 0\\
+        x_3-x_1 & y_3-y_1 & 0\\
+        \end{vmatrix}\\
+        & = (x_2-x_1)(y_3-y_1) - (x_3-x_1)(y_2-y_1).
+        \end{align*}$$
+      </p>
+
+      <p>
+        If the determinant is zero, then
+        $$ \frac{y_3-y_1}{x_3-x_1} = \frac{y_2-y_1}{x_2-x_1},$$
+        so \(A,B,C\) are collinear. This implies, by contrapositive, 3 noncollinear points determine a circle uniquely.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="jumbotron text-center" style="margin-bottom:0">
+  <p>Created by Tony Chan @ 2020-2021</p>
+</div>
+
+</body>
+</html>
